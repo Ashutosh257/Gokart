@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<link rel="stylesheet" type="text/css" href="w3.css">
+	<style type="text/css">
+		body{
+			background: url("images/userback.jpg") no-repeat fixed center;
+			background-size: cover;
+		}
+	</style>
+	
+<body>
+	<div class="w3-display-middle" style="width: 40%;">
+	<div class="w3-container w3-text-white" id="urname" style="font-size: 35px">yo user
+	</div>
+	<form name="f1" action="user.php" method="POST" class="w3-container w3-animate-opacity w3-round-large w3-blue w3-card-4">
+		<p><input type="text" name="username" id="username" style="height:3em;" class="w3-round-large w3-input " required placeholder="USERNAME" onblur="user()"></p>
+        
+		<p><input type="password" name="password" style="height:3em;" class="w3-round-large w3-input" required placeholder="PASSWORD"></p>
+		
+        <p class="w3-center"><button type="submit" class="w3-btn w3-block w3-round-large w3-hover-orange w3-hover-text-white w3-border w3-centre" style="font-size: 25px">Login</button></p>
+		
+        <hr class="w3-red">
+        
+        <p class="w3-center">Not Registered Yet?<br><a href="userregister.html"><input type="button" class="w3-btn" name="" value="Sign Up" style="font-size: 20px"></a>
+            </p>
+	</form>
+	</div>
+
+	<script type="text/javascript">
+		function user(){
+			var x=document.forms['f1']['username'].value;
+			console.log(x);
+			if(x!='')
+				document.getElementById('urname').innerHTML="<h1 class='w3-animate-zoom'>Hello "+x+"</h1>";
+			else
+				document.getElementById('urname').innerHTML="yo user";
+		}
+	</script>
+</body>
+</html>
